@@ -118,3 +118,7 @@ def load_images(filename):
 '''
 more comments
 '''
+
+'''
+even more comments
+'''
