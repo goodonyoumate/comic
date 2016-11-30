@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+    % include('shared/html-head.html')
+    <body>
+        
+        <nav>
+            <div class="nav-wrapper #3949ab indigo darken-1">
+                <a href="/" class="brand-logo center">check in page</a>
+                <ul class="left">
+                    <li><a href="/"><i class="material-icons"> arrow_back</i>Back</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <ul class="collection">
+            % for name in ticket_list:
+            <li class="collection-item">{{name.name}}
+            
+                {{name.checked_in}}
+                
+                % if name.checked_in:
+                    <i class ="material-icons green-text secondary-content right"> checked_circle</i>
+                % else:
+                    <i class ="material-icons grey-text secondary-content right"> panorama_fish_eye</i>
+                % end
+            </li>
+            % end
+        </ul>
+    <p> use the icon instead of "check in" text</p>
+    </body>
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+    % include('shared/html-head.html')
+    <body>
+        
+        <nav>
+            <div class="nav-wrapper #3949ab indigo darken-1">
+                <a href="/" class="brand-logo center">sell page</a>
+                <ul class="left">
+                    <li><a href="/"><i class="material-icons"> arrow_back</i>Back</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <div class="container">
+        <div class="row">
+        % for comic in comic_list:
+            
+            
+            <div class="col s3 m3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{{comic.url}}">
+                      <span class="card-title">{{comic.name}}</span>
+                    </div>
+                    <div class="card-content">
+                      <p>{{comic.description}}</p>
+                      <p>Quantity: {{comic.quantity}}</p>    
+                    
+                        % if comic.quantity >= 1:
+                            <a href="/sell-comic-success/{{comic.id}}"><i class ="material-icons green-text secondary-content right"> shopping_cart</i></a>
+                            
+                         
+                        % end
+                   
+                    </div>
+                      
+                    
+                   
+
+                    
+                  </div>
+            </div>
+        % end
+        </div>
+        </div>
+            
+            
+        <!--
+            
+        <li class="collection-item">{{comic.name}}
+        
+                % if comic.quantity > 1:
+                    <a href="/sell-comic-success/{{comic.id}}"><i class ="material-icons green-text secondary-content right"> euro_symbol</i></a>
+                % else:
+                    <i class ="material-icons grey-text secondary-content right">       lock outline</i>
+                % end
+            </li>
+            % end
+        </ul>
+    -->
+    </body>
+
+
+</html>

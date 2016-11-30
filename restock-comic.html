@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    
+    % include('shared/html-head.html')
+    
+    <body>
+        <nav>
+            <div class="nav-wrapper #3949ab indigo darken-1">
+                <a href="/" class="brand-logo center">Re-stock</a>
+                <ul class="left">
+                    <li><a href="/"><i class="material-icons"> arrow_back</i>Back</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <br>
+        
+        <form action="/restock-success" method="POST">
+            <label for="name" class="validate required autofocus"> Name</label>
+            <!-- input does not have a closing tag -->
+            <input name="name" type ="text" class="validate required autofocus">
+            <label for="quantity" class="validate"> restock quantity</label>
+            <input name="quantity" type ="number">
+            
+            <button type="submit">Submit</button>
+        
+        </form>
+    </body>
+
+
+</html>
